@@ -56,7 +56,7 @@ async def generate_session(bot: Client, msg: Message, telethon=False, is_bot: bo
         ty += " ʙᴏᴛ"
     await msg.reply(f"**♪ انت الان سوف تستخرج جلسه بيروجرام اصدار 2.0.59  🚦⚡ .**")
     user_id = msg.chat.id
-    api_id_msg = await bot.ask(user_id, "**♪ ارسل الان : api_id الخاص بالحساب  🚦⚡ .**", filters=filters.text)
+    api_id_msg = await bot.ask(user_id, "**♪تخطي /ارسل الان : api_id الخاص بالحساب  🚦⚡ .**", filters=filters.text)
     if await cancelled(api_id_msg):
         return
     if api_id_msg.text == "تخطي":
